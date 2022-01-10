@@ -1,0 +1,23 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/jjpp43/node.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjpp43/node.js/issues"
+  },
+  "homepage": "https://github.com/jjpp43/node.js#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "uuid-apikey": "^1.5.3"
+  }
+}
