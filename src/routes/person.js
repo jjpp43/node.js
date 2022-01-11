@@ -12,7 +12,7 @@ router.get('/person', (req, res) => {
 });
 
 //Params property on the request object
-//This allows urls like localhost:3000/person/john
+//This allows urls like localhost:3000/person/thomas
 router.get('/person/:name', (req, res) => {
 	res.send('You have requested a person ${req.params.name}');
 })
