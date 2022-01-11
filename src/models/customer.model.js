@@ -1,12 +1,19 @@
 const mongoose = require('mongoose');
+const path = require('path');
+const dotenv = require('dotenv').config({path: __dirname + '/.env'});
 
-const server = ' ';
-const database = '';
-const user = '';
-const password = '';
 
-mongoose.connect('mongoodb//${user}:${password}@${server}/${database}');
-
+console.log(process.env.MONGODB_URL);
+/*
+mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true}, (err) => {
+    if(err) {
+        console.log(err);
+    } else {
+        console.log('Connected!');
+    }
+});
+*/
+//Define a customer schema
 let CustomerSchema = new mongoose.Schema({
     name: String,
     email: {
@@ -16,4 +23,5 @@ let CustomerSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Customer', CustomerScheme);
+//export it as a mongoose model
+module.exports = mongoose.model('Customer', CustomerSchema);
